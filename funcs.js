@@ -1,13 +1,24 @@
 function isFive(num) {
-  // Your code here
+  return num === 5;
 }
 
 function isOdd(number) {
-  // Your code here
+  if (isNaN(number)) {
+    throw new Error('not type number: ', err)
+  }
+  return number % 2 !== 0;
 }
 
 function myRange(min, max, step = 1) {
-  // Your code here
+  if (min > max) {
+    return []
+  }
+
+  let range = []
+  for (let i = min; i <= max; i += step) {
+    range.push(i)
+  }
+  return range;
 }
 
 
